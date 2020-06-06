@@ -1,0 +1,74 @@
+  <nav class="navbar navbar-expand-sm navbar-primary">
+    <div class="container">
+      <a class="nav-link" href="index.html">
+        <img src="https://cdn1.mundodastribos.com/wp-admin/uploads/2010/09/cursos-instituto-mau%C3%A1-de-tecnologia.png" class="navbar-brand" alt="Logo Mauá" style="width: 100px;">
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#minhaNavBar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="minhaNavBar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+              <button class= "link btn" (click)="homePage()">  
+                Home
+              </button>
+          </li>
+          <li class="nav-item">
+            <button class= "link btn" (click)="showGraduations()"> 
+              Cursos
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class= "link btn" (click)="showProfessors()"> 
+              Professores
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class= "link btn" (click)="showContato()"> 
+              Fale Conosco
+            </button>
+          </li>
+      </ul>
+      </div>
+    </div>
+    <div class="container">
+      <form action="" class="form-inline">
+        <div class="form-group ">
+            <input type="text" class="form-control" id="email" placeholder="Digite seu email">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+        </div>
+    <button type="submit" class="btn btn-success">Login</button>
+    </form>  
+    </div>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb justify-content-center">
+    <li [class]="'breadcrumb-item ' + HomeBreadcrumb">
+      <button class= "link" (click)="homePage()">  
+        Home
+      </button>
+    </li>
+      <li [class]="'breadcrumb-item ' + GraduationCourseBreadcrumb">
+        <button class= "link" (click)="showGraduations()"> 
+          Cursos
+        </button>
+      </li>
+      <li [class]="'breadcrumb-item ' + ProfessorsBreadcrumb">
+        <button class= "link" (click)="showProfessors()"> 
+          Professores
+        </button>
+      </li>
+      <li [class]="'breadcrumb-item ' + ContatoBreadcrumb">
+        <button class= "link" (click)="showContato()"> 
+          Sugestões
+        </button>
+      </li>
+  </ol>
+</nav>
+
+<app-cursos [hidden]="hideGraduationCourses" ></app-cursos>
+<app-professores [hidden]="hideProfessors"></app-professores>
+<app-contato [hidden]="hideContato"></app-contato>

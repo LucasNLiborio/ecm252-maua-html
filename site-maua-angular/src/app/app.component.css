@@ -1,0 +1,14 @@
+nav {
+    background-color: aliceblue;
+}
+
+button.link{
+    color: blue;
+    background:none;
+    border:none; 
+}
+
+
+.breadcrumb-item.active{
+    display: none;
+}
