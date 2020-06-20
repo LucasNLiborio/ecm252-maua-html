@@ -69,6 +69,6 @@
   </ol>
 </nav>
 
-<app-cursos [hidden]="hideGraduationCourses" ></app-cursos>
-<app-professores [hidden]="hideProfessors"></app-professores>
-<app-contato [hidden]="hideContato"></app-contato>
+<app-cursos *ngIf="!hideGraduationCourses" ></app-cursos>
+<app-professores *ngIf="!hideProfessors"></app-professores>
+<app-contato *ngIf="!hideContato"></app-contato>
