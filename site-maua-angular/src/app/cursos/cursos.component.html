@@ -1,112 +1,12 @@
-<div class="container text-center mb-3 text-primary" id="cursos">
-    <h1 class="display-5"> Graduação </h1>
-    <div class="row justify-content-center">
-        <div class="card col-lg-4 col-sm-6 justify-content my-2">
-            <img src="https://maua.br/img/upload/092018/administracao-14102942.png" class="card-img-top" alt="Administração">
-            <div class="card-body">
-                <h5 class="card-title">Administração</h5>
-                <p class="card-text text-justify">
-                    O Administrador Mauá é um profissional preparado para atuar, sempre como líder, nos mais diversos mercados de trabalho: instituições financeiras, empresas de serviços, consultorias, comércio varejista ou atacadista e indústrias de diversos segmentos.
-                </p>
-            </div>
-        </div>
+<div class="container">
+    <app-cursos-cadastro (cursoAdicionado)="onAdicionarCurso($event)"></app-cursos-cadastro>
+</div>
 
-        <div class="card col-lg-4 col-sm-6 justify-content my-2">
-            <img src="https://maua.br/img/upload/092018/design-14102950.png" class="card-img-top" alt="design">
-            <div class="card-body">
-                <h5 class="card-title">Design</h5>
-                <p class="card-text text-justify">
-                    O curso é totalmente voltado para a prática, com o desenvolvimento de projetos em todos os semestres, do início ao fim. Todos eles são desenvolvidos com empresas parceiras de diversos setores  que trazem para a academia problemas reais do mercado que serão solucionados por equipes de alunos e professores criativos e competentes.
-                </p>
-            </div>
+<div class="container text-center mb-3 text-primary" id="Cursos">
+    <h1 class="display-5">Graduação</h1>
+    <div class="row justify-content-center my-2">
+        <div class="card col-lg-4 col-sm-6 justify-content my-2" *ngFor="let curso of cursos">
+            <app-cursos-cartao [curso]="curso"></app-cursos-cartao>
         </div>
-
-        <div class="card col-lg-4 col-sm-6 justify-content my-2">
-            <img src="https://maua.br/img/upload/092018/engenharia-alimentos-14103003.png" class="card-img-top" alt="alimentos">
-            <div class="card-body">
-                <h5 class="card-title">Engenharia de Alimentos</h5>
-                <p class="card-text text-justify">
-                    A graduação em Engenharia de Alimentos da Mauá oferece um intenso programa prático que leva o aluno desde as primeiras séries para os laboratórios didáticos e de pesquisa e de processamento em pequena escala. O campus conta ainda com uma instalação semi-industrial capaz de simular a produção de diversos produtos, semelhante ao que fazem as indústrias de alimentos.               
-                </p>
-            </div>
-        </div>
-
-        <div class="card col-lg-4 col-sm-6 justify-content my-2">
-            <img src="https://maua.br/img/upload/092018/engenharia-civil-14103012.png" class="card-img-top" alt="civil">
-            <div class="card-body">
-                <h5 class="card-title">Engenharia Civil</h5>
-                <p class="card-text text-justify">
-                    O curso tem uma área de atuação ampla que exige do profissional uma formação diversificada e pronto para atender obras distintas: construção de edifícios residenciais, ferrovias, aeroportos ou faça o planejamento de sistemas de saneamento básico para cidades, podendo trabalhar com arquitetos e ambientalistas em grandes construções. 
-                </p>
-            </div>
-        </div>
-
-        <div class="card col-lg-4 col-sm-6 justify-content my-2">
-            <img src="https://maua.br/img/upload/092018/engenharia-computacao-14103023.png" class="card-img-top" alt="computacao">
-            <div class="card-body">
-                <h5 class="card-title">Engenharia de Computação</h5>
-                <p class="card-text text-justify">
-                    A graduação em Engenharia de Computação da Mauá oferece aos alunos uma formação com base nos conceitos fundamentais da Engenharia, até a formação especializada em Sistemas Embarcados, Software, Infraestrutura e Segurança, Ciência de Dados e suas inter-relações                
-                </p>
-            </div>
-        </div>
-
-        <div class="card col-lg-4 col-sm-6 justify-content my-2">
-            <img src="https://maua.br/img/upload/092018/engenharia-controle-automacao-14103035.png" class="card-img-top" alt="controle e automação">
-            <div class="card-body">
-                <h5 class="card-title">Engenharia de Controle e Automação</h5>
-                <p class="card-text text-justify">
-                    A formação em Engenharia de Controle e Automação da Mauá  prepara o aluno para o uso de máquinas e conhecimento sobre os processos de fabricação, da Engenharia Eletrônica e da Ciência da Computação, além das suas aplicações em controle de processos e automação industrial.
-                </p>
-            </div>
-        </div>
-
-        <div class="card col-lg-4 col-sm-6 justify-content my-2">
-            <img src="https://maua.br/img/upload/092018/engenharia-eletrica-14103052.png" class="card-img-top" alt="eletrica">
-            <div class="card-body">
-                <h5 class="card-title">Engenharia Elétrica</h5>
-                <p class="card-text text-justify">
-                    A Mauá oferece a seu aluno de Engenheira Elétrica uma formação que, além de fortemente alicerçada nos conceitos fundamentais da Engenharia, permeia e entrelaça as áreas de Conversão de Energia, Regulamentação, Proteção, Distribuição e Energias Alternativas.
-                </p>
-            </div>
-        </div>
-
-        <div class="card col-lg-4 col-sm-6 justify-content my-2">
-            <img src="https://maua.br/img/upload/092018/engenharia-eletronica-14103106.png" class="card-img-top" alt="eletrica">
-            <div class="card-body">
-                <h5 class="card-title">Engenharia Eletrônica</h5>
-                <p class="card-text text-justify">
-                    A Mauá oferece a seu aluno de Engenheira Eletrônica uma formação com base nos conceitos fundamentais da Engenharia com as áreas de Telecomunicações, Sistemas Computacionais, Eletrônica e Automação de Processos Industriais. Embora científica e tecnológica, a formação também valoriza os aspectos humanísticos e sociais que tornam o profissional um elemento de atuação diferenciada para a sociedade.
-                </p>
-            </div>
-        </div>
-
-        <div class="card col-lg-4 col-sm-6 justify-content my-2">
-            <img src="https://maua.br/img/upload/102018/engenharia-mecanica-18154700.png" class="card-img-top" alt="mecanica">
-            <div class="card-body">
-                <h5 class="card-title">Engenharia Mecânica</h5>
-                <p class="card-text text-justify">
-                    A graduação em Engenharia Mecânica é uma das mais abrangentes modalidades da Engenharia. Ela trata de tudo o que se move, de brinquedos a fábricas (com tudo o que está dentro), passando por eletrodomésticos, embarcações, veículos etc. Além disso, ela trata de instalações de conversão de energia como hidroelétricas e termoelétricas, instalações de ar-condicionado, de geração de vapor e frigoríficas.                    </p>
-            </div>
-        </div>
-
-        <div class="card col-lg-4 col-sm-6 justify-content my-2">
-            <img src="https://maua.br/img/upload/102018/engenharia-producao-18154849.png" class="card-img-top" alt="producao">
-            <div class="card-body">
-                <h5 class="card-title">Engenharia de Produção</h5>
-                <p class="card-text text-justify">
-                    Infraestrutura de ponta, profissionais reconhecidos num curso bem-conceituado. Essa é a graduação em Engenharia de Produção da Mauá, ideal para um futuro de sucesso!                
-                </p>
-        </div>
-        </div>
-
-        <div class="card col-lg-4 col-sm-6  my-2">
-            <img src="https://maua.br/img/upload/092018/engenharia-quimica-14103146.png" class="card-img-top" alt="quimica">
-            <div class="card-body">
-                <h5 class="card-title">Engenharia Química</h5>
-                <p class="card-text text-justify">
-                    O Engenheiro Químico pode atender várias áreas de atuação, como engenheiro de: projeto, produto, processo, produção, desenvolvimento, manutenção, segurança, qualidade, aplicações, assistência técnica, suprimentos e vendas; diversos cargos em nível de gerência, pesquisador e professor.                    </p>
-        </div>
-     </div>
     </div>
 </div>
