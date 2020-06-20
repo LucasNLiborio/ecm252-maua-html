@@ -46,22 +46,22 @@
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb justify-content-center">
-    <li [class]="'breadcrumb-item ' + HomeBreadcrumb">
+    <li *ngIf="!hideHome" class="breadcrumb-item">
       <button class= "link" (click)="homePage()">  
         Home
       </button>
     </li>
-      <li [class]="'breadcrumb-item ' + GraduationCourseBreadcrumb">
+      <li *ngIf="hideGraduationCourses" class="breadcrumb-item">
         <button class= "link" (click)="showGraduations()"> 
           Cursos
         </button>
       </li>
-      <li [class]="'breadcrumb-item ' + ProfessorsBreadcrumb">
+      <li *ngIf="hideProfessors" class="breadcrumb-item">
         <button class= "link" (click)="showProfessors()"> 
           Professores
         </button>
       </li>
-      <li [class]="'breadcrumb-item ' + ContatoBreadcrumb">
+      <li *ngIf="hideContato" class="breadcrumb-item">
         <button class= "link" (click)="showContato()"> 
           Sugestões
         </button>

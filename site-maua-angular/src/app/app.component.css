@@ -7,8 +7,3 @@ button.link{
     background:none;
     border:none; 
 }
-
-
-.breadcrumb-item.active{
-    display: none;
-}
