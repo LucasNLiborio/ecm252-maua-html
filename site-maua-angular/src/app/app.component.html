@@ -28,6 +28,11 @@
               Fale Conosco
             </button>
           </li>
+          <li class="nav-item">
+            <button class= "link btn" (click)="showAlunos()"> 
+              Alunos
+            </button>
+          </li>
       </ul>
       </div>
     </div>
@@ -66,9 +71,19 @@
           Sugestões
         </button>
       </li>
+      <li *ngIf="hideAlunos" class="breadcrumb-item">
+        <button class= "link" (click)="showAlunos()"> 
+          Alunos
+        </button>
+      </li>
   </ol>
 </nav>
 
-<app-cursos *ngIf="!hideGraduationCourses" ></app-cursos>
-<app-professores *ngIf="!hideProfessors"></app-professores>
-<app-contato *ngIf="!hideContato"></app-contato>
+<div class="container">
+
+  <app-cursos *ngIf="!hideGraduationCourses" ></app-cursos>
+  <app-professores *ngIf="!hideProfessors"></app-professores>
+  <app-contato *ngIf="!hideContato"></app-contato>
+  <app-formulario-alunos *ngIf="!hideAlunos"></app-formulario-alunos>
+  
+</div>

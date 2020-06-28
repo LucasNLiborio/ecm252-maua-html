@@ -10,12 +10,14 @@ export class AppComponent {
   hideProfessors = true;
   hideContato = true;
   hideHome = true;
+  hideAlunos = true;
 
   showGraduations(){
     this.hideGraduationCourses = false;
     this.hideProfessors = true;
     this.hideContato = true;
     this.hideHome = false;
+    this.hideAlunos = true;
   }
 
   showProfessors(){
@@ -23,13 +25,15 @@ export class AppComponent {
     this.hideProfessors = false;
     this.hideContato = true;
     this.hideHome = false;
+    this.hideAlunos = true;
   }
-  
+
   homePage(){
     this.hideGraduationCourses = true;
     this.hideProfessors = true;
     this.hideContato = true;
     this.hideHome = true;
+    this.hideAlunos = true;
   }
 
   showContato(){
@@ -37,5 +41,15 @@ export class AppComponent {
     this.hideProfessors = true;
     this.hideContato = false;
     this.hideHome = false;
+    this.hideAlunos = true;
   }
+
+  showAlunos(){
+    this.hideGraduationCourses = true;
+    this.hideProfessors = true;
+    this.hideContato = true;
+    this.hideHome = false;
+    this.hideAlunos = false;
+  }
+  
 }

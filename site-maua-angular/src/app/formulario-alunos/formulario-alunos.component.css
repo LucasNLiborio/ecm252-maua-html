@@ -1,0 +1,7 @@
+.curso-eh-engenharia {
+    background-color: #EEE6FF;
+}
+
+.curso-nao-eh-engenharia {
+    background-color: rgba(255, 0, 0, 0.154);
+}
